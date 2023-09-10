@@ -1,0 +1,14 @@
+{% extends 'AppToDo/base.html' %}
+
+{% block heading %}
+    <title>{{ tweets.user }}</title>
+{% endblock heading %}
+
+{% block content %}
+        <div class="tweet">
+            <a href="" class="user">@{{ tweets.title }}</a>
+            <p class="tweets">{{ tweets.description }}</p>
+            <span class="post_date">{{ tweet.date|date:'D H:i' }}</span>
+        </div>
+    <a href="{{ tweets.id }}/delete">Delete</a>
+{% endblock content %}

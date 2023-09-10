@@ -1,0 +1,16 @@
+{% extends 'AppToDo/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block heading %}
+    <title>Post</title>
+
+{% endblock heading %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <h3>Really ?</h3>
+        <a class="btn btn-outline-info" href="{% url 'index' %}">No</a>
+        <button class="btn btn-outline-info" type="submit">Yes</button>
+    </form>
+{% endblock content %}
